@@ -1,0 +1,54 @@
+header#main-header{
+
+  background-color: black;
+  color:white;
+
+  #site-navbar{
+    width:100%;
+
+    .container{
+      width:100%;
+      padding:10px;
+
+       li{
+         list-style: none;
+       }
+       .caret:after{
+         content: "\f107";
+         font-family: "Font Awesome 5 Free";
+         color: lightgrey;
+         font-weight: 900;
+         font-size: 12px;
+       }
+       .caret-right:after{
+         content: "\f0da";
+         font-family: "Font Awesome 5 Free";
+         color: lightgrey;
+         font-weight: 900;
+         font-size: 12px;
+       }
+       .navbar-header{
+         width:100%;
+         display:flex;
+         justify-content: flex-start;
+         align-items: center;
+
+         .hamburger{
+           width:40px;
+           padding: 0 10px;
+         }
+
+         .navbar-logo{
+           max-width: 110px;
+           padding-left:40%;
+
+           img{ width:100%;}
+          }
+
+         }
+
+      }
+
+  }
+
+}

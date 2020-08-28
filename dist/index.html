@@ -3,14 +3,170 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="app.css">
+    <!-- FONTS ROBOTO LATO E MONTSERRAT-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- VIEWPORT SCALE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="app.js"> </script>
     <title>Painter</title>
   </head>
+
+
   <body>
-    <header>
+    <header id="main-header">
+      <!-- Complete Site NavBar section -->
+      <nav id="site-navbar">
+
+        <div class="container">
+          <div class="navbar-header">
+            <button class="hamburger" type="button"  name="button"><i class="fas fa-bars"></i></button>
+            <a class="navbar-logo" href="#">
+              <img class="logo" src="img/logo_painter.png" alt="LOGO PAINTER">
+            </a>
+
+          </div>
+          <div id="navbar">
+
+            <!-- NavBar Top section -->
+            <ul id="navbar-top">
+              <li class="li-all-products parent-dropdown">
+
+                <span class="caret">Products</span>
+
+                <ul class="dropdown-menu">
+
+                  <li class="dropdown dropdown-submenu">
+                    <span class="caret-right">Digital Painting</span>
+
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Painter</a></li>
+                      <li><a href="#">Particle</a></li>
+                      <li><a href="#">Painter 2020</a></li>
+                      <li role="separator"></li>
+                      <li class="dropdown-header"></li>
+                      <li><a href="#">Painter Essential</a></li>
+                      <li><a href="#">Painter Advanced 2020</a></li>
+                      <li><a href="#">Painter Essential</a></li>
+                      <li><a href="#">Painter Advanced 2020</a></li>
+                    </ul>
+                  </li>
+
+                  <li class=" dropdown dropdown-submenu">
+                    <span class="caret-right">Licensing&Education</span>
+
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Painter</a></li>
+                      <li><a href="#">Particle</a></li>
+                      <li><a href="#">Painter 2020</a></li>
+                    </ul>
+                  </li>
+
+                  <li class=" dropdown dropdown-submenu">
+                    <span class="caret-right">Mobile App</span>
+
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Painter</a></li>
+                      <li><a href="#">Particle</a></li>
+                      <li><a href="#">Painter 2020</a></li>
+                    </ul>
+                  </li>
+
+                  <li class=" dropdown dropdown-submenu">
+                    <span class="caret-right">Wacom Tablet</span>
+
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Painter</a></li>
+                      <li><a href="#">Particle</a></li>
+                      <li><a href="#">Painter 2020</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+              </li>
+
+              <li class="li-all-brushes parent-dropdown">
+
+                <span class="caret">Brushes</span>
+
+                <ul class="dropdown-menu">
+
+                  <li><a href="#">Painter</a></li>
+                  <li><a href="#">Particle Shop</a></li>
+                  <li><a href="#">Painter</a></li>
+
+                </ul>
+
+              </li>
+
+              <li class="li-tablet"> <a href="#">Wacom Tablet</a> </li>
+              <li class="li-specialoffers"> <a href="#">Special Offers</a> </li>
+              <li class="li-trial"> <a href="#">Free Trial</a> </li>
+              <li class="li-business"> <a href="#">Business</a> </li>
+
+              <li class="li-support parent-dropdown">
+
+                <span class="caret">Support</span>
+
+                <ul class="dropdown-menu">
+
+                  <li><a href="#">Patches & Updates</a></li>
+                  <li><a href="#">Knowledge Base</a></li>
+                  <li><a href="#">Painter</a></li>
+
+                </ul>
+
+              </li>
+
+              <li class="li-learning parent-dropdown">
+
+                <span class="caret">Learning</span>
+
+                <ul class="dropdown-menu">
+
+                  <li><a href="#">Tutorial</a></li>
+                  <li><a href="#">Tips&Tricks</a></li>
+                  <li><a href="#">Artists Interview</a></li>
+
+                </ul>
+
+              </li>
+
+
+
+
+
+
+            </ul>
+
+            <!-- NavBar actions section -->
+            <ul id="navbar-actions">
+              <li class="phone"><a href="#"><i class="fas fa-phone-alt"></i>1-877-582-6735</a></li>
+              <li class="chat"><a href="#"><i class="fas fa-comment-alt"></i>Chat</a></li>
+              <li class="user"><a href="#"><i class="fas fa-user"></i>Sign in</a></li>
+              <li class="cart"><a href="#"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+              <li class="lang">
+                <select id="lang" class="" name="">
+                  <option value="eng" selected ="selected">English</option>
+                  <option value="fr" >France</option>
+                  <option value="ge" >Deutch</option>
+                </select>
+              </li>
+
+            </ul>
+
+
+          </div>
+        </div>
+
+      </nav>
     </header>
 
     <main>
+      <section id="prod-hero">
+
+      </section>
     </main>
 
     <footer>
