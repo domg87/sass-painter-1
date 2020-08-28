@@ -5,6 +5,7 @@
 }
 
 header#main-header {
+  width: 100%;
   background-color: black;
   color: white;
 }
@@ -12,8 +13,13 @@ header#main-header #site-navbar {
   width: 100%;
 }
 header#main-header #site-navbar .container {
-  width: 100%;
-  padding: 10px;
+  max-width: 1200px;
+  background-color: coral;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 45px;
+  margin-right: auto;
+  margin-left: auto;
 }
 header#main-header #site-navbar .container li {
   list-style: none;
@@ -33,19 +39,127 @@ header#main-header #site-navbar .container .caret-right:after {
   font-size: 12px;
 }
 header#main-header #site-navbar .container .navbar-header {
-  width: 100%;
+  float: left;
+  width: 200px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-header#main-header #site-navbar .container .navbar-header .hamburger {
+header#main-header #site-navbar .container .navbar-header .hamburger.collapsed {
+  display: none;
   width: 40px;
   padding: 0 10px;
 }
 header#main-header #site-navbar .container .navbar-header .navbar-logo {
-  max-width: 110px;
-  padding-left: 40%;
+  max-width: 100px;
+  padding: 8px 15px;
+  margin-right: 0;
 }
 header#main-header #site-navbar .container .navbar-header .navbar-logo img {
   width: 100%;
+}
+header#main-header #site-navbar .container #navbar {
+  min-height: 50px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+header#main-header #site-navbar .container #navbar #navbar-link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: red;
+  flex-wrap: wrap;
+}
+header#main-header #site-navbar .container #navbar #navbar-link > li {
+  display: inline-block;
+  margin-left: 15px;
+  cursor: pointer;
+}
+header#main-header #site-navbar .container #navbar #navbar-link > li a {
+  color: #989898;
+  text-decoration: none;
+}
+header#main-header #site-navbar .container #navbar #navbar-link > li i {
+  position: relative;
+  top: 4px;
+  font-size: 16px;
+  padding-right: 10px;
+  color: #009cff;
+}
+header#main-header #site-navbar .container #navbar .actions {
+  position: absolute;
+  right: 0%;
+  top: 10%;
+  font-size: 12px;
+}
+header#main-header #site-navbar .container #navbar #navbar-top {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: red;
+  margin-top: 15px;
+}
+header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] {
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: grey;
+}
+header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: pink;
+}
+header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu .dropdown-menu {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  width: 200px;
+  background-color: lightgreen;
+}
+header#main-header #site-navbar .container #navbar #navbar-top > li > a {
+  padding: 10px 15px;
+  background-color: lightblue;
+}
+header#main-header #site-navbar .container #navbar #navbar-top > li > a:hover {
+  background-color: green;
+}
+header#main-header #site-navbar .container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media all and (max-width: 778px) {
+  header#main-header {
+    background-color: lightgreen;
+    color: white;
+  }
+  header#main-header .container .actions {
+    position: initial !important;
+    margin-top: 5px !important;
+    color: #989898;
+  }
+  header#main-header .container .navbar-header .hamburger.collapsed {
+    display: block !important;
+  }
+  header#main-header .container .navbar-logo {
+    position: absolute;
+    left: 33%;
+    padding: 15px 15px;
+    width: 140px;
+  }
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
 }

@@ -21,7 +21,7 @@
 
         <div class="container">
           <div class="navbar-header">
-            <button class="hamburger" type="button"  name="button"><i class="fas fa-bars"></i></button>
+            <button class="hamburger collapsed" type="button"  name="button"><i class="fas fa-bars"></i></button>
             <a class="navbar-logo" href="#">
               <img class="logo" src="img/logo_painter.png" alt="LOGO PAINTER">
             </a>
@@ -30,53 +30,53 @@
           <div id="navbar">
 
             <!-- NavBar Top section -->
-            <ul id="navbar-top">
+            <ul id="navbar-top" class="topnav">
               <li class="li-all-products parent-dropdown">
 
-                <span class="caret">Products</span>
+                <a class="caret">Products</a>
 
-                <ul class="dropdown-menu">
+                <ul class="dropdown collapsed">
 
-                  <li class="dropdown dropdown-submenu">
+                  <li class="dropdown dropdown-submenu collapsed">
                     <span class="caret-right">Digital Painting</span>
 
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Painter</a></li>
+                    <ul class="dropdown-menu collapsed">
+                      <li><a href="#">---Painter----</a></li>
                       <li><a href="#">Particle</a></li>
                       <li><a href="#">Painter 2020</a></li>
                       <li role="separator"></li>
-                      <li class="dropdown-header"></li>
+                      <li class="dropdown-header">APP STORE EDITION</li>
                       <li><a href="#">Painter Essential</a></li>
                       <li><a href="#">Painter Advanced 2020</a></li>
                       <li><a href="#">Painter Essential</a></li>
-                      <li><a href="#">Painter Advanced 2020</a></li>
+                      <li><a href="#">----Painter Advanced 2020----</a></li>
                     </ul>
                   </li>
 
-                  <li class=" dropdown dropdown-submenu">
+                  <li class="dropdown dropdown-submenu collapsed">
                     <span class="caret-right">Licensing&Education</span>
 
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu collapsed">
                       <li><a href="#">Painter</a></li>
                       <li><a href="#">Particle</a></li>
                       <li><a href="#">Painter 2020</a></li>
                     </ul>
                   </li>
 
-                  <li class=" dropdown dropdown-submenu">
+                  <li class="dropdown dropdown-submenu collapsed">
                     <span class="caret-right">Mobile App</span>
 
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu collapsed">
                       <li><a href="#">Painter</a></li>
                       <li><a href="#">Particle</a></li>
                       <li><a href="#">Painter 2020</a></li>
                     </ul>
                   </li>
 
-                  <li class=" dropdown dropdown-submenu">
+                  <li class="dropdown dropdown-submenu collapsed">
                     <span class="caret-right">Wacom Tablet</span>
 
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu collapsed">
                       <li><a href="#">Painter</a></li>
                       <li><a href="#">Particle</a></li>
                       <li><a href="#">Painter 2020</a></li>
@@ -88,9 +88,9 @@
 
               <li class="li-all-brushes parent-dropdown">
 
-                <span class="caret">Brushes</span>
+                <a class="caret">Brushes</a>
 
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu collapsed">
 
                   <li><a href="#">Painter</a></li>
                   <li><a href="#">Particle Shop</a></li>
@@ -107,9 +107,9 @@
 
               <li class="li-support parent-dropdown">
 
-                <span class="caret">Support</span>
+                <a class="caret">Support</a>
 
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu collapsed">
 
                   <li><a href="#">Patches & Updates</a></li>
                   <li><a href="#">Knowledge Base</a></li>
@@ -121,9 +121,9 @@
 
               <li class="li-learning parent-dropdown">
 
-                <span class="caret">Learning</span>
+                <a class="caret">Learning</a>
 
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu collapsed">
 
                   <li><a href="#">Tutorial</a></li>
                   <li><a href="#">Tips&Tricks</a></li>
@@ -132,17 +132,11 @@
                 </ul>
 
               </li>
-
-
-
-
-
-
             </ul>
 
             <!-- NavBar actions section -->
-            <ul id="navbar-actions">
-              <li class="phone"><a href="#"><i class="fas fa-phone-alt"></i>1-877-582-6735</a></li>
+            <ul id="navbar-link" class="actions">
+              <li class="phone"><a href="#"><i class="fas fa-phone-alt"></i> 1-877-582-6735 </a></li>
               <li class="chat"><a href="#"><i class="fas fa-comment-alt"></i>Chat</a></li>
               <li class="user"><a href="#"><i class="fas fa-user"></i>Sign in</a></li>
               <li class="cart"><a href="#"><i class="fas fa-shopping-cart"></i>Cart</a></li>
