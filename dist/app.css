@@ -4,56 +4,92 @@
   padding: 0;
 }
 
+#wrapper {
+  width: 100%;
+  height: 3000px;
+}
+
 header#main-header {
   width: 100%;
-  background-color: black;
+  background-color: #101010;
   color: white;
+}
+header#main-header .toggle {
+  display: block;
+}
+header#main-header::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 header#main-header #site-navbar {
   width: 100%;
 }
 header#main-header #site-navbar .container {
   max-width: 1200px;
-  background-color: coral;
   padding-right: 15px;
   padding-left: 15px;
-  padding-top: 45px;
+  padding-top: 25px;
+  padding-bottom: 0px;
   margin-right: auto;
   margin-left: auto;
 }
 header#main-header #site-navbar .container li {
   list-style: none;
 }
+header#main-header #site-navbar .container a {
+  padding: 10px 15px;
+  white-space: nowrap;
+  text-decoration: none;
+  display: block;
+}
 header#main-header #site-navbar .container .caret:after {
   content: "\F107";
   font-family: "Font Awesome 5 Free";
-  color: lightgrey;
+  color: grey;
   font-weight: 900;
   font-size: 12px;
+  padding-left: 5px;
+}
+header#main-header #site-navbar .container .caret-right {
+  position: relative;
 }
 header#main-header #site-navbar .container .caret-right:after {
+  position: absolute;
   content: "\F0DA";
   font-family: "Font Awesome 5 Free";
-  color: lightgrey;
+  color: grey;
   font-weight: 900;
   font-size: 12px;
+  line-height: 1.5;
+  left: 97% !important;
+  top: 0%;
+  transform: translate(-50%, 50%);
 }
 header#main-header #site-navbar .container .navbar-header {
   float: left;
-  width: 200px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 header#main-header #site-navbar .container .navbar-header .hamburger.collapsed {
+  font-size: 22px;
+  color: white;
+  width: 46px;
+  height: 33px;
+  border-radius: 2px;
+  border: none;
+  background-color: transparent;
   display: none;
-  width: 40px;
-  padding: 0 10px;
+}
+header#main-header #site-navbar .container .navbar-header .hamburger.collapsed:hover {
+  background-color: #f1f1f1;
 }
 header#main-header #site-navbar .container .navbar-header .navbar-logo {
-  max-width: 100px;
-  padding: 8px 15px;
+  max-width: 90px;
   margin-right: 0;
+  height: 50px;
+  line-height: 5;
 }
 header#main-header #site-navbar .container .navbar-header .navbar-logo img {
   width: 100%;
@@ -64,42 +100,24 @@ header#main-header #site-navbar .container #navbar {
   top: 0;
   left: 0;
 }
-header#main-header #site-navbar .container #navbar #navbar-link {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: red;
-  flex-wrap: wrap;
-}
-header#main-header #site-navbar .container #navbar #navbar-link > li {
-  display: inline-block;
-  margin-left: 15px;
-  cursor: pointer;
-}
-header#main-header #site-navbar .container #navbar #navbar-link > li a {
-  color: #989898;
-  text-decoration: none;
-}
-header#main-header #site-navbar .container #navbar #navbar-link > li i {
-  position: relative;
-  top: 4px;
-  font-size: 16px;
-  padding-right: 10px;
-  color: #009cff;
-}
-header#main-header #site-navbar .container #navbar .actions {
-  position: absolute;
-  right: 0%;
-  top: 10%;
-  font-size: 12px;
+header#main-header #site-navbar .container #navbar::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 header#main-header #site-navbar .container #navbar #navbar-top {
   flex-wrap: wrap;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: red;
   margin-top: 15px;
+}
+header#main-header #site-navbar .container #navbar #navbar-top .bg-grey {
+  background-color: #f1f1f1;
+}
+header#main-header #site-navbar .container #navbar #navbar-top a:hover {
+  background-color: #f1f1f1;
+  color: black !important;
 }
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] {
   position: relative;
@@ -107,59 +125,419 @@ header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] 
   left: 0;
   cursor: pointer;
 }
+header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > a {
+  padding: 18px 25px;
+  color: white;
+}
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul {
+  z-index: 1000;
+  color: #333;
+  min-width: 160px;
   position: absolute;
-  top: 40px;
+  top: 50px;
   left: 0;
-  background-color: grey;
+}
+header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > li > a {
+  color: #333;
 }
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu {
+  min-width: 160px;
   position: relative;
   top: 0;
   left: 0;
-  background-color: pink;
+}
+header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu:hover {
+  background-color: #e6e6e6 !important;
 }
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu .dropdown-menu {
+  z-index: 1000;
   position: absolute;
   top: 0px;
-  left: 100px;
-  width: 200px;
-  background-color: lightgreen;
+  left: 100%;
+  min-width: 160px;
+  background-color: #e6e6e6 !important;
 }
-header#main-header #site-navbar .container #navbar #navbar-top > li > a {
-  padding: 10px 15px;
-  background-color: lightblue;
+header#main-header #site-navbar .container #navbar-link {
+  position: absolute;
+  right: 60px;
+  top: -40px;
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-header#main-header #site-navbar .container #navbar #navbar-top > li > a:hover {
-  background-color: green;
+header#main-header #site-navbar .container #navbar-link > li {
+  display: inline-block;
+  cursor: pointer;
+}
+header#main-header #site-navbar .container #navbar-link > li #lang {
+  padding-left: 15px;
+}
+header#main-header #site-navbar .container #navbar-link > li i {
+  position: relative;
+  top: 4px;
+  font-size: 16px;
+  padding-right: 10px;
+  color: #009cff;
+}
+header#main-header #site-navbar .container #navbar-link > li a {
+  color: grey;
 }
 header#main-header #site-navbar .container::after {
   content: "";
-  clear: both;
   display: table;
+  clear: both;
 }
 
 @media all and (max-width: 778px) {
-  header#main-header {
-    background-color: lightgreen;
-    color: white;
+  header#main-header .toggle {
+    display: none;
   }
-  header#main-header .container .actions {
-    position: initial !important;
-    margin-top: 5px !important;
-    color: #989898;
+  header#main-header .container {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 20px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    padding-bottom: 15px !important;
+  }
+  header#main-header .container .caret-right {
+    position: relative;
+  }
+  header#main-header .container .caret-right:after {
+    float: right;
+    padding-right: 50px;
+    content: "\F107" !important;
+    font-family: "Font Awesome 5 Free";
+    color: blue;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 2 !important;
+  }
+  header#main-header .container .navbar-header {
+    float: none !important;
   }
   header#main-header .container .navbar-header .hamburger.collapsed {
     display: block !important;
   }
-  header#main-header .container .navbar-logo {
+  header#main-header .container .navbar-header .navbar-logo {
     position: absolute;
-    left: 33%;
-    padding: 15px 15px;
+    left: 40%;
     width: 140px;
+  }
+  header#main-header .container #navbar {
+    width: 100%;
+    min-height: 50px;
+  }
+  header#main-header .container #navbar a {
+    display: block;
+    border-bottom: 1px solid black;
+    padding: 12px 0px !important;
+    width: 100%;
+  }
+  header#main-header .container #navbar #navbar-top {
+    width: 100%;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 15px;
+  }
+  header#main-header .container #navbar #navbar-top > li[class*=li-] {
+    width: 100% !important;
+    position: static !important;
+    margin-bottom: 0px !important;
+    cursor: pointer;
+  }
+  header#main-header .container #navbar #navbar-top > li[class*=li-] > ul {
+    width: 100% !important;
+    position: static !important;
+  }
+  header#main-header .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu {
+    position: static !important;
+  }
+  header#main-header .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu .dropdown-menu {
+    width: 100% !important;
+    position: static !important;
+  }
+  header#main-header .container #navbar #navbar-link {
+    width: 100%;
+    position: static !important;
+    margin-top: 5px !important;
+    color: #989898;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  header#main-header .container #navbar #navbar-link > li {
+    width: 100%;
+    display: inline-block;
+    margin-left: 0px;
+    cursor: pointer;
   }
 }
 body {
   font-family: "Segoe UI", sans-serif;
   font-size: 14px;
+}
+
+.collapsed {
+  display: none;
+}
+
+main {
+  font-family: "Sailec-Bold", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  font-weight: 400;
+  width: 100%;
+}
+main h1, main h2 {
+  font-weight: normal;
+}
+
+section#prod-hero {
+  color: white;
+  width: 100%;
+  background-image: url("img/hero-painteressentials-7.jpg");
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-position-x: center;
+  background-position-y: top;
+}
+section#prod-hero .content {
+  max-width: 1200px;
+  padding-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+section#prod-hero .content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+section#prod-hero .content .info-product {
+  font-size: 130%;
+  margin-left: 20%;
+  float: left;
+  line-height: 2;
+}
+section#prod-hero .content .info-product ul {
+  margin-bottom: 30px;
+}
+section#prod-hero .content .info-product li {
+  list-style: none;
+}
+section#prod-hero .content .info-product li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F054";
+  margin-right: 6px;
+  font-weight: 900;
+  font-size: 16px;
+  color: grey;
+}
+section#prod-hero .content .info-product .button-download-trial {
+  padding: 10px;
+  font-size: 16px;
+  display: block;
+  width: 200px;
+  background-color: #666;
+  line-height: 1;
+}
+section#prod-hero .content .info-product .button-download-trial .text {
+  width: 100%;
+}
+section#prod-hero .content .info-product .button-download-trial .text p, section#prod-hero .content .info-product .button-download-trial .text i {
+  color: white;
+}
+section#prod-hero .content .info-product .button-download-trial .text::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+section#prod-hero .content .info-product .button-download-trial .text p {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 75%;
+  border-right: 1px solid white;
+}
+section#prod-hero .content .info-product .button-download-trial .text i {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 10px;
+  width: 15%;
+  font-size: 24px;
+}
+section#prod-hero .content .card {
+  position: relative;
+  float: left;
+  padding: 20px 15px 90px 15px;
+  margin-left: 4%;
+  background-color: black;
+  width: 30%;
+  line-height: 2;
+}
+section#prod-hero .content .card button#btn-buy {
+  margin: 20px 0;
+  padding: 10px 40px;
+  background-color: #009cff;
+  font-size: 15px;
+  color: white;
+  border: none;
+}
+section#prod-hero .content .card .price-save {
+  font-size: 1em;
+  color: #fff;
+  background: #CC397F;
+  padding: 8px 12px;
+}
+section#prod-hero .content .card .price-discount {
+  line-height: 1;
+  margin-top: 30px;
+}
+section#prod-hero .content .card .price-discount > * {
+  display: block;
+}
+section#prod-hero .content .card .price-discount span:last-of-type {
+  font-size: 16px;
+  color: #999;
+  margin-top: 15px;
+}
+section#prod-hero .content .card .price-discount .price-old {
+  font-size: 18px;
+  color: #acacac;
+  text-decoration: line-through;
+}
+section#prod-hero .content .card .price-discount .price-new {
+  font-size: 26px;
+  color: #fff;
+}
+section#prod-hero .content .card .guarantee {
+  width: 30px;
+  position: absolute;
+  top: 20px;
+  right: 80px;
+}
+section#prod-hero .content .card .price-box {
+  margin-top: 20px;
+  padding: 10px 10px 10px 15px;
+  background: rgba(255, 255, 255, 0.9);
+  line-height: 130%;
+  font-size: 110%;
+}
+section#prod-hero .content .card .price-box a {
+  color: black;
+  text-decoration: none;
+}
+section#prod-hero .content .card .price-box a:hover span:last-of-type {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+section#prod-hero .content .card .price-box a h4 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+section#prod-hero .content .card .price-box a span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 5px !important;
+}
+section#prod-hero .content .card .price-box a span:last-of-type {
+  color: #009cff;
+}
+section#prod-hero .content .card .price-box a .color-1 {
+  color: #CC397F !important;
+  font-weight: 800;
+}
+
+@media all and (max-width: 990px) {
+  section#prod-hero .content .info-product {
+    margin-left: 15px !important;
+  }
+}
+nav#product-nav {
+  width: 100%;
+  background-color: #e6e6e6;
+}
+nav#product-nav.stick {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+nav#product-nav ul#product-nav-list {
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  list-style-type: none;
+}
+nav#product-nav ul#product-nav-list > li > a {
+  text-transform: uppercase;
+  display: block;
+  color: #555;
+  font-size: 20px;
+  padding: 20px 24px;
+  text-decoration: none;
+  font-weight: 400;
+}
+nav#product-nav ul#product-nav-list > li > a:hover {
+  background-color: white;
+}
+nav#product-nav ul#product-nav-list > li.active > a {
+  background-color: white;
+  border-bottom: 4px solid black;
+}
+
+div#tab-content #overview .intro {
+  width: 100%;
+  text-align: center;
+  background-image: url("img/intro.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div#tab-content #overview .intro * {
+  color: white;
+  text-decoration: none;
+}
+div#tab-content #overview .intro > div {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.2;
+  padding-top: 20px;
+}
+div#tab-content #overview .intro > div h2 {
+  font-size: 32px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+div#tab-content #overview .intro > div p, div#tab-content #overview .intro > div span {
+  font-size: 18px;
+}
+div#tab-content #overview .intro .intro-element {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+div#tab-content #overview .intro .intro-guide {
+  padding-bottom: 40px;
+}
+div#tab-content #overview .intro .intro-img {
+  position: relative;
+}
+div#tab-content #overview .intro .intro-img img:first-of-type {
+  width: 95%;
+}
+div#tab-content #overview .intro .intro-img img:last-of-type {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -1,0 +1,36 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin margin-r-l-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin flex-common-start{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin inline-alignbottom{
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+@mixin clearfix {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+@mixin content-max-width {
+  max-width: 1200px;
+}
+
+@mixin content-max-width-960 {
+  max-width: 960px;
+}

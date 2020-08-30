@@ -1,0 +1,55 @@
+div#tab-content{
+
+  #overview{
+
+    .intro{
+
+      * {color: white; text-decoration: none;}
+
+
+      width: 100%;
+      text-align: center;
+      background-image: url("img/intro.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      & > div{
+        @include content-max-width-960;
+        @include margin-r-l-auto;
+        line-height: 1.2;
+        padding-top:20px;
+
+        h2 {font-size: 32px; padding-top: 60px;padding-bottom:20px;}
+
+        p , span {font-size: 18px; }
+      }
+
+      .intro-element{
+        padding-left:80px;
+        padding-right: 80px;
+      }
+
+      .intro-guide{padding-bottom: 40px;}
+
+      .intro-img{
+        position: relative;
+
+        img:first-of-type{width: 95%;}
+
+        img:last-of-type{
+          width:100%;
+          position: absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%,-50%);
+        }
+
+      }
+
+
+    }
+
+
+  }
+}

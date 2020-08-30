@@ -1,11 +1,7 @@
 header#main-header{
   width:100%;
-  background-color:#101010;
+  background-color: black;
   color:white;
-
-  .toggle{display: block;}
-
-  &::after{ @include clearfix;}
 
   // level1 enter inside site-navbar--------------
   #site-navbar{
@@ -13,102 +9,78 @@ header#main-header{
 
     // level2 enter inside container--------------
     .container{
-      @include content-max-width;
+      max-width: 1200px;
+
+
+      background-color: coral;
+
       padding-right: 15px;
       padding-left: 15px;
-      padding-top: 25px;
-      padding-bottom: 0px;
-      @include margin-r-l-auto;
+      padding-top: 45px;
+      margin-right: auto;
+      margin-left: auto;
 
-       li{list-style: none;}
 
-       a{
-         padding: 10px 15px;
-         white-space: nowrap;
-         text-decoration: none;
-         display: block;
+
+       li{
+         list-style: none;
        }
 
        .caret:after{
          content: "\f107";
          font-family: "Font Awesome 5 Free";
-         color: grey;
+         color: lightgrey;
          font-weight: 900;
          font-size: 12px;
-         padding-left: 5px;
        }
-
-       .caret-right{position: relative;}
-
        .caret-right:after{
-         position: absolute;
          content: "\f0da";
          font-family: "Font Awesome 5 Free";
-         color: grey;
+         color: lightgrey;
          font-weight: 900;
          font-size: 12px;
-         line-height: 1.5;
+       }
 
-         left: 97%!important;
-         top: 0%;
-         transform: translate(-50%,50%);
-        }
-
-// .navbar-header --------------------------------------------------------
+       // level3 enter inside navbar-header--------------
        .navbar-header{
          float:left;
-
-         @include flex-common-start;
+         width:200px;
+         display:flex;
+         justify-content: flex-start;
+         align-items: center;
 
          .hamburger.collapsed{
-           font-size: 22px;
-           color:white;
-
-           width: 46px;
-           height: 33px;
-           border-radius: 2px;
-           border:none;
-           background-color: transparent;
            display: none;
-
-           &:hover{background-color: #f1f1f1;}
+           width:40px;
+           padding: 0 10px;
          }
 
          .navbar-logo{
-            max-width: 90px;
+            max-width: 100px;
+            padding: 8px 15px;
             margin-right: 0;
-            height: 50px;
-            line-height: 5;
+
 
            img{ width:100%;}
-
           }
+
         } // level3 EXIT
 
-//navbar level-----------------------------------------------------------
         #navbar{
           min-height:50px;
-
           position: relative;
           top:0;
           left:0;
 
-          &::after{ @include clearfix;}
 
           #navbar-top{
+
             flex-wrap: wrap;
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-
+            background-color: red;
             margin-top:15px;
-
-            .bg-grey{background-color: #f1f1f1;}
-
-            a:hover{
-                background-color: #f1f1f1;
-                color:black!important;
-              }
 
             & > li[class*="li-"] {
               position: relative;
@@ -116,43 +88,42 @@ header#main-header{
               left:0;
               cursor: pointer;
 
-              &>a{
-                padding: 18px 25px;
-                color:white;
-              }
+
 
               &>ul{
-                z-index: 1000;
-                color:#333;
-
-                min-width:160px;
-
                 position:absolute;
-                top:50px;
+                top:40px;
                 left:0;
-
-                &>li>a{color:#333;}
+                background-color: grey;
 
                 & > .dropdown-submenu{
-                  min-width:160px;
-
                   position: relative;
                   top:0;
                   left:0;
-
-                  &:hover{background-color:  #e6e6e6 !important}
+                  background-color: pink;
 
                   .dropdown-menu{
-                    z-index: 1000;
                     position:absolute;
                     top:0px;
-                    left:100%;
-                    min-width:160px;
-                    background-color: #e6e6e6 !important
+                    left:100px;
+                    width:200px;
+                    background-color: lightgreen;
                   }
 
-               }
-             }
+                }
+
+              }
+            }
+
+            & > li > a {
+              padding:10px 15px;
+              background-color: lightblue;
+
+              &:hover{
+                background-color: green;
+              }
+
+
             }
           }
         }
@@ -160,119 +131,134 @@ header#main-header{
           #navbar-link{
 
             position: absolute;
-            right: 60px;
-            top: -40px;
+            right: 0%;
+            top: 10%;
             font-size: 12px;
+
 
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            background-color: red;
+            flex-wrap: wrap;
 
             & > li{
               display: inline-block;
+              margin-left:15px;
               cursor: pointer;
 
-              #lang{padding-left:15px;}
+              a{
+                color:#989898;
+                text-decoration: none;
+              }
 
               i {
                 position: relative;
                 top:4px;
                 font-size: 16px;
                 padding-right:10px;
-                color: $color_lightblue;
+                color: #009cff;
               }
-
-              a{color:grey;}
             }
           }
+
+
+
+
+
+
       } // level2 EXIT
 
-    .container::after{ @include clearfix;}
+    .container::after{
+      content: "";
+     clear: both;
+     display: table;
+    }
 
   } // level1 EXIT
 
 }
 
-//MEDIA QUERY--------------------------------------------------------
+
 @media  all and  (max-width: 778px) {
 
   header#main-header{
 
-    .toggle{display: none;}
+    background-color: lightgreen;
+    color:white;
 
     .container{
-      width:100%;
       margin-right: 0;
       margin-left: 0;
-      padding-top:20px!important;
-      padding-right: 0px!important;
-      padding-left: 0px!important;
-      padding-bottom: 15px!important;
-
-      .caret-right{position: relative;}
-
-      .caret-right:after{
-        float:right;
-        padding-right: 50px;
-
-        content: "\f107"!important;
-        font-family: "Font Awesome 5 Free";
-        color: blue;
-        font-weight: 900;
-        font-size: 12px;
-        line-height: 2!important;
-      }
 
       .navbar-header{
         float:none!important;
+        width:200px;
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
 
-        .hamburger.collapsed{display:block!important;}
+
+        .hamburger.collapsed{
+          display:block!important;
+        }
 
         .navbar-logo{
           position: absolute;
           left: 40%;
+          padding: 15px 15px;
           width: 140px;
         }
 
       } //navbar-header
 
+
       #navbar{
         width:100%;
         min-height:50px;
+        position: static!important;
 
-        a{
-          display: block;
-          border-bottom: 1px solid black;
-          padding:12px 0px!important;
-          width:100%;
-        }
 
         #navbar-top{
           width:100%;
           flex-wrap: nowrap;
-          display: flex;
           flex-direction: column;
+          display: flex;
           justify-content: flex-start;
           align-items: flex-start;
+          background-color: green;
           margin-top:15px;
 
+           a {
+            width:100%;
+            padding:10px 0px;
+
+            background-color: orange;
+
+            &:hover{background-color: green;}
+
+          }
+
           & > li[class*="li-"] {
-            width:100%!important;
+            width:100%;
             position: static!important;
-            margin-bottom: 0px!important;
             cursor: pointer;
 
+
+
             &>ul{
-              width:100%!important;
+              width:100%;
               position: static!important;
+              background-color: grey;
 
               & > .dropdown-submenu{
-
                 position: static!important;
+                background-color: pink;
 
                 .dropdown-menu{
-                  width:100%!important;
                   position: static!important;
+                  width:100%;
+                  background-color: lightgreen;
                 } //.dropdown-menu
 
               } //& > .dropdown-submenu
@@ -281,30 +267,45 @@ header#main-header{
 
           } //& > li[class*="li-"]
 
+          // & > li > a {
+          //   padding:10px 15px;
+          //   background-color: lightblue;
+          //
+          //   &:hover{background-color: green;}
+
+          // } //& > li > a
+
         }  //#navbar-top
 
         #navbar-link{
-          width:100%;
 
           position: static!important;
           margin-top: 5px!important;
           color: #989898;
 
+
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          align-items: flex-start;
+          align-items: center;
+          background-color:coral;
+          flex-wrap: nowrap;
 
           & > li{
-            width:100%;
             display: inline-block;
-            margin-left:0px;
-
+            margin-left:15px;
             cursor: pointer;
+
           }
         }
 
+
+
       }   //#navbar
+
+
+
+
 
     }  // .container
 
