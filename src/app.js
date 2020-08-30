@@ -40,17 +40,54 @@ function changeNavbarPosition() {
     })
 }
 
+
+function carouselNextImage(){
+  var imgActive =  $('#transition-carousel > div.image > ul > li.active');
+  var imgFirst = $('li[data-id = 0]');
+  var imgLast = $('li[data-id = 3]');
+
+    if ( imgActive.data() === imgLast.data()  ) {
+    imgFirst.addClass('active');
+      imgActive.removeClass('active');
+    }
+    else{
+      imgActive.next().addClass('active');
+      imgActive.removeClass('active');
+    }
+}
+
+
+function carouselPrevImage(){
+  var imgActive =  $('#transition-carousel > div.image > ul > li.active');
+  var imgFirst = $('li[data-id = 0]');
+  var imgLast = $('li[data-id = 3]');
+
+    if ( imgActive.data() === imgFirst.data()  ) {
+    imgLast.addClass('active');
+      imgActive.removeClass('active');
+    }
+    else{
+      imgActive.prev().addClass('active');
+      imgActive.removeClass('active');
+    }
+}
+
 function init(){
 
-  // window.onscroll = changePos();
-
   changeNavbarPosition();
-
 
   console.log("Hello World");
   openNavbarOnClick();
   openDropDownMenuOnClick();
   openDropDownSubMenuOnClick();
+
+
+  var nextBtn= $('#transition-carousel .controls >i#next');
+  var prevBtn = $('#transition-carousel .controls >i#prev');
+
+  nextBtn.click(carouselNextImage);
+  prevBtn.click(carouselPrevImage);
+
 
 }
 

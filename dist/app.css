@@ -528,6 +528,12 @@ div#tab-content #overview .intro .intro-element {
 div#tab-content #overview .intro .intro-guide {
   padding-bottom: 40px;
 }
+div#tab-content #overview .intro .intro-guide a > img {
+  width: 36px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
 div#tab-content #overview .intro .intro-img {
   position: relative;
 }
@@ -540,4 +546,51 @@ div#tab-content #overview .intro .intro-img img:last-of-type {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.transition {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: black;
+}
+.transition .transition-text {
+  padding: 20px 17px;
+}
+.transition .transition-text h2 {
+  font-size: 32px;
+  padding: 60px 0px 20px 0px;
+}
+.transition .transition-text p {
+  font-size: 18px;
+}
+.transition #transition-carousel {
+  position: relative;
+  height: 600px;
+}
+.transition #transition-carousel ul {
+  list-style-type: none;
+}
+.transition #transition-carousel .active {
+  z-index: 600;
+}
+.transition #transition-carousel li, .transition #transition-carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 960px;
+}
+.transition #transition-carousel .controls {
+  width: 100%;
+  font-size: 30px;
+  color: orange;
+  position: absolute;
+  top: 50%;
+}
+.transition #transition-carousel .controls i:first-of-type {
+  transform: translateX(-500px);
+}
+.transition #transition-carousel .controls i:last-of-type {
+  transform: translateX(500px);
 }

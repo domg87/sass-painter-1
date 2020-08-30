@@ -30,7 +30,18 @@ div#tab-content{
         padding-right: 80px;
       }
 
-      .intro-guide{padding-bottom: 40px;}
+      .intro-guide{
+        padding-bottom: 40px;
+
+         a > img {
+           width:36px;
+           display: inline-block;
+           vertical-align: middle;
+           margin-right: 20px;
+
+         }
+
+      }
 
       .intro-img{
         position: relative;
@@ -53,3 +64,53 @@ div#tab-content{
 
   }
 }
+
+  .transition{
+    @include content-max-width-960;
+    @include margin-r-l-auto;
+    text-align: center;
+
+    color:black;
+
+    .transition-text{
+
+      padding:20px 17px;
+
+      h2 {font-size: 32px; padding: 60px 0px 20px 0px;}
+
+      p {font-size: 18px}
+    }
+
+      #transition-carousel {
+        position: relative;
+        height: 600px;
+
+        ul{ list-style-type: none;}
+
+        .active{z-index:600;}
+
+        li,img{
+          position: absolute;
+          top:0;
+          left:0;
+          width: 960px;
+        }
+
+        .controls{
+          width:100%;
+          font-size: 30px;
+          color: orange;
+
+          position: absolute;
+          top:50%;
+            i:first-of-type{transform: translateX(-500px);}
+            i:last-of-type{transform: translateX(500px);}
+        }
+
+      }
+
+
+
+
+
+  }

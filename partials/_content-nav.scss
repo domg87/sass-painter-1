@@ -11,7 +11,7 @@ nav#product-nav{
 
   ul#product-nav-list{
 
-    @include content-max-width;
+    @include content-max-width-1200;
     @include flex-common-start;
     flex-wrap: wrap;
     @include margin-r-l-auto;

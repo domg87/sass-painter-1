@@ -11,7 +11,7 @@ section#prod-hero{
   background-position-y: top;
 
   .content{
-    @include content-max-width;
+    @include content-max-width-1200;
     padding-top: 30px;
     @include margin-r-l-auto;
 

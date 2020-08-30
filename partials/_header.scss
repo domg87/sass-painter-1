@@ -13,7 +13,7 @@ header#main-header{
 
     // level2 enter inside container--------------
     .container{
-      @include content-max-width;
+      @include content-max-width-1200;
       padding-right: 15px;
       padding-left: 15px;
       padding-top: 25px;
