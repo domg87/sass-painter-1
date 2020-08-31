@@ -494,6 +494,12 @@ nav#product-nav ul#product-nav-list > li.active > a {
   border-bottom: 4px solid black;
 }
 
+div#tab-content .align-mid-50 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 25px;
+  margin-right: 25px;
+}
 div#tab-content #overview section.intro {
   width: 100%;
   background-image: url("img/intro.jpg");
@@ -625,7 +631,17 @@ div#tab-content #overview section.transition #transition-carousel .controls i:fi
 div#tab-content #overview section.transition #transition-carousel .controls i:last-of-type {
   float: right;
 }
-div#tab-content #overview section.img-attach {
+div#tab-content #overview section.img-attach.first {
+  background-image: url("img/image-bg-02.jpg");
+  height: 650px;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+div#tab-content #overview section.img-attach.second {
   background-image: url("img/image-bg-02.jpg");
   height: 650px;
   background-color: #ccc;
@@ -679,45 +695,41 @@ div#tab-content #overview section.product-specs .flexible .image-container {
 div#tab-content #overview section.product-specs .flexible .image-container img {
   width: 100%;
 }
-div#tab-content #overview .experiment {
-  max-width: 960px;
+div#tab-content #overview section.product-specs .pillar-canvas, div#tab-content #overview section.product-specs .pillar-brushes {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
 }
-div#tab-content #overview .experiment .text-container {
+div#tab-content #overview section.product-specs .pillar-canvas .text-container, div#tab-content #overview section.product-specs .pillar-brushes .text-container {
   text-align: center;
   line-height: 1.4;
-  display: inline-block;
-  width: 45%;
-  padding-left: 0;
-  padding-right: 0;
   text-align: left;
-  vertical-align: middle;
+  width: 35%;
 }
-div#tab-content #overview .experiment .text-container h2 {
+div#tab-content #overview section.product-specs .pillar-canvas .text-container h2, div#tab-content #overview section.product-specs .pillar-brushes .text-container h2 {
   font-size: 33px;
 }
-div#tab-content #overview .experiment .text-container h3 {
+div#tab-content #overview section.product-specs .pillar-canvas .text-container h3, div#tab-content #overview section.product-specs .pillar-brushes .text-container h3 {
   font-size: 25px;
   font-weight: normal;
   padding-top: 20px;
 }
-div#tab-content #overview .experiment .text-container h4 {
+div#tab-content #overview section.product-specs .pillar-canvas .text-container h4, div#tab-content #overview section.product-specs .pillar-brushes .text-container h4 {
   font-size: 20px;
   font-weight: normal;
   padding-top: 20px;
 }
-div#tab-content #overview .experiment .text-container p, div#tab-content #overview .experiment .text-container span, div#tab-content #overview .experiment .text-container a {
+div#tab-content #overview section.product-specs .pillar-canvas .text-container p, div#tab-content #overview section.product-specs .pillar-canvas .text-container span, div#tab-content #overview section.product-specs .pillar-canvas .text-container a, div#tab-content #overview section.product-specs .pillar-brushes .text-container p, div#tab-content #overview section.product-specs .pillar-brushes .text-container span, div#tab-content #overview section.product-specs .pillar-brushes .text-container a {
   display: inline-block;
   font-weight: normal;
   font-size: 18px;
   padding-top: 20px;
 }
-div#tab-content #overview .experiment .image-container {
-  display: inline-block;
-  width: 50%;
-  vertical-align: middle;
+div#tab-content #overview section.product-specs .pillar-canvas .image-container, div#tab-content #overview section.product-specs .pillar-brushes .image-container {
+  width: 55%;
 }
-div#tab-content #overview .experiment .image-container img {
+div#tab-content #overview section.product-specs .pillar-canvas .image-container img, div#tab-content #overview section.product-specs .pillar-brushes .image-container img {
   width: 100%;
 }

@@ -1,5 +1,12 @@
 div#tab-content{
 
+    .align-mid-50{
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+
   #overview{
 
     section.intro{
@@ -48,8 +55,6 @@ div#tab-content{
       }
     }
 
-
-
     section.transition{
       @include content-max-width-960;
       @include margin-r-l-auto;
@@ -92,7 +97,12 @@ div#tab-content{
         }
     }
 
-    section.img-attach{
+    section.img-attach.first{
+      background-image: url('img/image-bg-02.jpg');
+      @include  bg-image-fixed;
+    }
+
+    section.img-attach.second{
       background-image: url('img/image-bg-02.jpg');
       @include  bg-image-fixed;
     }
@@ -106,37 +116,38 @@ div#tab-content{
         @include content-max-width-960;
         @include margin-r-l-auto;
 
-        .text-container{ @include content-format-text; @include general-padding-80;}
+        .text-container{
+          @include content-format-text;
+          @include general-padding-80;
+        }
 
         .image-container{
           @include margin-r-l-auto;
-          img{width:100%;}
+          img{
+            width:100%;
+          }
         }
       }
-    }
 
-    .experiment{
-      @include content-max-width-960;
+        .pillar-canvas, .pillar-brushes{
+      padding-top: 80px;
+      padding-bottom: 80px;
+      @include content-max-width-1200;
       @include margin-r-l-auto;
 
       .text-container{
         @include content-format-text;
-        display: inline-block;
-        width:45%;
-        padding-left:0;
-        padding-right: 0;
         text-align: left;
-        vertical-align: middle;
+        width:35%;
       }
 
       .image-container{
-        display: inline-block;
-        width:50%;
-        vertical-align: middle;
-
+        width:55%;
         img{width:100%;}
     }
-  }
+
+      }
+    }
 
 
 

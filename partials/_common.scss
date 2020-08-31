@@ -21,6 +21,11 @@
   vertical-align: bottom;
 }
 
+@mixin inline-align-middle{
+  display: inline-block;
+  vertical-align: middle;
+}
+
 @mixin clearfix {
   content:"";
   display: table;
