@@ -642,7 +642,7 @@ div#tab-content #overview section.img-attach.first {
   -webkit-background-size: cover;
 }
 div#tab-content #overview section.img-attach.second {
-  background-image: url("img/image-bg-02.jpg");
+  background-image: url("img/image-bg-01.jpg");
   height: 650px;
   background-color: #ccc;
   background-repeat: no-repeat;
@@ -732,4 +732,156 @@ div#tab-content #overview section.product-specs .pillar-canvas .image-container,
 }
 div#tab-content #overview section.product-specs .pillar-canvas .image-container img, div#tab-content #overview section.product-specs .pillar-brushes .image-container img {
   width: 100%;
+}
+div#tab-content #overview section.sections {
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  line-height: 1.4;
+  background-color: white;
+  width: 100%;
+}
+div#tab-content #overview section.sections h2 {
+  font-size: 33px;
+}
+div#tab-content #overview section.sections h3 {
+  font-size: 25px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview section.sections h4 {
+  font-size: 20px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview section.sections p, div#tab-content #overview section.sections span, div#tab-content #overview section.sections a {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 18px;
+  padding-top: 20px;
+}
+div#tab-content #overview section.sections .gallery {
+  padding-top: 60px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+div#tab-content #overview section.sections .gallery::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+div#tab-content #overview section.sections .gallery .imgholder {
+  float: left;
+  width: calc(100%/5 - 24px);
+  height: auto;
+  padding-left: 30px;
+  overflow: hidden;
+}
+div#tab-content #overview section.sections .gallery .imgholder:first-of-type {
+  padding-left: 0;
+}
+div#tab-content #overview section.sections .gallery .imgholder img {
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+div#tab-content #overview section.sections .gallery .imgholder img:hover {
+  transform: scale(1.2);
+}
+div#tab-content #overview section.brush-pack {
+  width: 100%;
+  background-image: url("img/brushpacks-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div#tab-content #overview section.brush-pack .container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+}
+div#tab-content #overview section.brush-pack .container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+div#tab-content #overview section.brush-pack .container .card-first, div#tab-content #overview section.brush-pack .container .card-second {
+  float: left;
+  padding: 30px 30px 80px;
+  text-align: center;
+  line-height: 1.4;
+  width: 40%;
+  background-color: white;
+  margin-left: 30px;
+}
+div#tab-content #overview section.brush-pack .container .card-first h2, div#tab-content #overview section.brush-pack .container .card-second h2 {
+  font-size: 33px;
+}
+div#tab-content #overview section.brush-pack .container .card-first h3, div#tab-content #overview section.brush-pack .container .card-second h3 {
+  font-size: 25px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview section.brush-pack .container .card-first h4, div#tab-content #overview section.brush-pack .container .card-second h4 {
+  font-size: 20px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview section.brush-pack .container .card-first p, div#tab-content #overview section.brush-pack .container .card-first span, div#tab-content #overview section.brush-pack .container .card-first a, div#tab-content #overview section.brush-pack .container .card-second p, div#tab-content #overview section.brush-pack .container .card-second span, div#tab-content #overview section.brush-pack .container .card-second a {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 18px;
+  padding-top: 20px;
+}
+div#tab-content #overview section.brush-pack .container .card-first:first-of-type, div#tab-content #overview section.brush-pack .container .card-second:first-of-type {
+  margin-left: 0;
+}
+div#tab-content #overview section.brush-pack .container .card-first a, div#tab-content #overview section.brush-pack .container .card-second a {
+  text-decoration: none;
+  color: #009cff;
+}
+
+footer {
+  width: 100%;
+}
+footer #footer-link {
+  width: 100%;
+  background-color: #ececec;
+}
+footer #footer-link .footer-link-section {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  max-width: 1200px;
+}
+footer #footer-link .footer-link-section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer #footer-link .footer-link-section .sect {
+  float: left;
+  width: calc(100% / 4);
+}
+footer #footer-link .footer-link-section .sect h3 {
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+footer #footer-link .footer-link-section .sect ul {
+  list-style-type: none;
+}
+footer #footer-link .footer-link-section .sect a {
+  text-decoration: none;
+}
+footer #footer-link .footer-link-section .sect a:hover {
+  text-decoration: underline;
 }

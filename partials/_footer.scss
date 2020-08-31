@@ -1,0 +1,36 @@
+footer{
+
+  width:100%;
+
+  #footer-link{
+    width:100%;
+
+    background-color: #ececec;
+
+    .footer-link-section{
+      @include margin-r-l-auto;
+      @include general-padding-80;
+      @include content-max-width-1200;
+
+      &:after{ @include clearfix;}
+
+      .sect{
+        float: left;
+        width: calc(100% / 4);
+
+        h3{padding-bottom: 10px; font-weight: normal;}
+
+        ul{ list-style-type: none;}
+
+          a{
+            text-decoration: none;
+            &:hover{text-decoration: underline;}
+
+          }
+        }
+
+    }
+
+
+  }
+}
