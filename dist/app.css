@@ -106,7 +106,6 @@ header#main-header #site-navbar .container #navbar::after {
   clear: both;
 }
 header#main-header #site-navbar .container #navbar #navbar-top {
-  flex-wrap: wrap;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -130,12 +129,12 @@ header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] 
   color: white;
 }
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul {
-  z-index: 1000;
-  color: #333;
-  min-width: 160px;
   position: absolute;
   top: 50px;
   left: 0;
+  z-index: 1000;
+  color: #333;
+  min-width: 160px;
 }
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > li > a {
   color: #333;
@@ -157,7 +156,7 @@ header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] 
   min-width: 160px;
   background-color: #e6e6e6 !important;
 }
-header#main-header #site-navbar .container #navbar-link {
+header#main-header #site-navbar .container #navbar #navbar-link {
   position: absolute;
   right: 60px;
   top: -40px;
@@ -166,21 +165,21 @@ header#main-header #site-navbar .container #navbar-link {
   justify-content: flex-end;
   align-items: center;
 }
-header#main-header #site-navbar .container #navbar-link > li {
+header#main-header #site-navbar .container #navbar #navbar-link > li {
   display: inline-block;
   cursor: pointer;
 }
-header#main-header #site-navbar .container #navbar-link > li #lang {
+header#main-header #site-navbar .container #navbar #navbar-link > li #lang {
   padding-left: 15px;
 }
-header#main-header #site-navbar .container #navbar-link > li i {
+header#main-header #site-navbar .container #navbar #navbar-link > li i {
   position: relative;
   top: 4px;
   font-size: 16px;
   padding-right: 10px;
   color: #009cff;
 }
-header#main-header #site-navbar .container #navbar-link > li a {
+header#main-header #site-navbar .container #navbar #navbar-link > li a {
   color: grey;
 }
 header#main-header #site-navbar .container::after {
@@ -195,8 +194,8 @@ header#main-header #site-navbar .container::after {
   }
   header#main-header .container {
     width: 100%;
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 20px !important;
     padding-right: 0px !important;
     padding-left: 0px !important;
@@ -210,7 +209,6 @@ header#main-header #site-navbar .container::after {
     padding-right: 50px;
     content: "\F107" !important;
     font-family: "Font Awesome 5 Free";
-    color: blue;
     font-weight: 900;
     font-size: 12px;
     line-height: 2 !important;

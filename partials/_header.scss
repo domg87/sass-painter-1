@@ -7,11 +7,9 @@ header#main-header{
 
   &::after{ @include clearfix;}
 
-  // level1 enter inside site-navbar--------------
   #site-navbar{
     width:100%;
 
-    // level2 enter inside container--------------
     .container{
       @include content-max-width-1200;
       padding-right: 15px;
@@ -54,7 +52,6 @@ header#main-header{
          transform: translate(-50%,50%);
         }
 
-// .navbar-header --------------------------------------------------------
        .navbar-header{
          float:left;
 
@@ -72,7 +69,7 @@ header#main-header{
            display: none;
 
            &:hover{background-color: #f1f1f1;}
-         }
+         } //hamburger
 
          .navbar-logo{
             max-width: 90px;
@@ -81,11 +78,10 @@ header#main-header{
             line-height: 5;
 
            img{ width:100%;}
-
           }
-        } // level3 EXIT
 
-//navbar level-----------------------------------------------------------
+        } // .navbar-header
+
         #navbar{
           min-height:50px;
 
@@ -96,7 +92,6 @@ header#main-header{
           &::after{ @include clearfix;}
 
           #navbar-top{
-            flex-wrap: wrap;
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
@@ -111,9 +106,7 @@ header#main-header{
               }
 
             & > li[class*="li-"] {
-              position: relative;
-              top:0;
-              left:0;
+              @include position-relative;
               cursor: pointer;
 
               &>a{
@@ -122,23 +115,18 @@ header#main-header{
               }
 
               &>ul{
-                z-index: 1000;
-                color:#333;
-
-                min-width:160px;
-
                 position:absolute;
                 top:50px;
                 left:0;
+                z-index: 1000;
+                color:#333;
+                min-width:160px;
 
                 &>li>a{color:#333;}
 
                 & > .dropdown-submenu{
                   min-width:160px;
-
-                  position: relative;
-                  top:0;
-                  left:0;
+                  @include position-relative;
 
                   &:hover{background-color:  #e6e6e6 !important}
 
@@ -150,15 +138,12 @@ header#main-header{
                     min-width:160px;
                     background-color: #e6e6e6 !important
                   }
-
                }
              }
             }
-          }
-        }
+          }//navbar-top
 
           #navbar-link{
-
             position: absolute;
             right: 60px;
             top: -40px;
@@ -184,14 +169,15 @@ header#main-header{
 
               a{color:grey;}
             }
-          }
-      } // level2 EXIT
+          }//#navbar-link
+
+        }//#navbar
+
+      } // container
 
     .container::after{ @include clearfix;}
-
-  } // level1 EXIT
-
-}
+  } // site-navbar
+}  //header#main-header
 
 //MEDIA QUERY--------------------------------------------------------
 @media  all and  (max-width: 778px) {
@@ -202,8 +188,7 @@ header#main-header{
 
     .container{
       width:100%;
-      margin-right: 0;
-      margin-left: 0;
+      @include margin-r-l-auto;
       padding-top:20px!important;
       padding-right: 0px!important;
       padding-left: 0px!important;
@@ -217,7 +202,7 @@ header#main-header{
 
         content: "\f107"!important;
         font-family: "Font Awesome 5 Free";
-        color: blue;
+        // color: blue;
         font-weight: 900;
         font-size: 12px;
         line-height: 2!important;
@@ -267,20 +252,15 @@ header#main-header{
               position: static!important;
 
               & > .dropdown-submenu{
-
                 position: static!important;
 
                 .dropdown-menu{
                   width:100%!important;
                   position: static!important;
                 } //.dropdown-menu
-
               } //& > .dropdown-submenu
-
             } //&>ul
-
           } //& > li[class*="li-"]
-
         }  //#navbar-top
 
         #navbar-link{
@@ -303,13 +283,8 @@ header#main-header{
             cursor: pointer;
           }
         }
-
       }   //#navbar
-
     }  // .container
-
-
   } //header #main
-
 
 } //media query
