@@ -2,115 +2,143 @@ div#tab-content{
 
   #overview{
 
-    .intro{
+    section.intro{
 
       * {color: white; text-decoration: none;}
 
 
       width: 100%;
-      text-align: center;
+
       background-image: url("img/intro.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
 
-      & > div{
+      .text-container{
         @include content-max-width-960;
         @include margin-r-l-auto;
-        line-height: 1.2;
-        padding-top:20px;
-
-        h2 {font-size: 32px; padding-top: 60px;padding-bottom:20px;}
-
-        p , span {font-size: 18px; }
-      }
-
-      .intro-element{
-        padding-left:80px;
-        padding-right: 80px;
-      }
-
-      .intro-guide{
-        padding-bottom: 40px;
+        @include content-format-text;
+        @include general-padding-80;
 
          a > img {
-           width:36px;
+           width:34px;
            display: inline-block;
            vertical-align: middle;
            margin-right: 20px;
-
          }
-
       }
 
-      .intro-img{
-        position: relative;
+      .image-container{
+        @include content-max-width-960;
+        @include margin-r-l-auto;
 
-        img:first-of-type{width: 95%;}
+        .intro-img{
+          position: relative;
 
-        img:last-of-type{
-          width:100%;
-          position: absolute;
-          top:50%;
-          left:50%;
-          transform: translate(-50%,-50%);
+          img:first-of-type{width: 98%;}
+
+          img:last-of-type{
+            width:100%;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+          }
         }
-
       }
-
-
     }
 
 
-  }
-}
 
-  .transition{
-    @include content-max-width-960;
-    @include margin-r-l-auto;
-    text-align: center;
+    section.transition{
+      @include content-max-width-960;
+      @include margin-r-l-auto;
+      color:black;
 
-    color:black;
-
-    .transition-text{
-
-      padding:20px 17px;
-
-      h2 {font-size: 32px; padding: 60px 0px 20px 0px;}
-
-      p {font-size: 18px}
-    }
-
-      #transition-carousel {
-        position: relative;
-        height: 600px;
-
-        ul{ list-style-type: none;}
-
-        .active{z-index:600;}
-
-        li,img{
-          position: absolute;
-          top:0;
-          left:0;
-          width: 960px;
-        }
-
-        .controls{
-          width:100%;
-          font-size: 30px;
-          color: orange;
-
-          position: absolute;
-          top:50%;
-            i:first-of-type{transform: translateX(-500px);}
-            i:last-of-type{transform: translateX(500px);}
-        }
-
+      .transition-text{
+        @include content-format-text;
+        @include general-padding-80;
       }
 
+        #transition-carousel {
+          position: relative;
+          height: 600px;
 
+          ul{ list-style-type: none;}
 
+          .active{z-index:600;}
 
+          li,img{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 960px;
+          }
 
+          .controls{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            width: 110%;
+            height: 30px;
+            font-size: 30px;
+            color: orange;
+
+              i:first-of-type{float: left;}
+              i:last-of-type{float: right;}
+          }
+        }
+    }
+
+    section.img-attach{
+      background-image: url('img/image-bg-02.jpg');
+      @include  bg-image-fixed;
+    }
+
+    section.product-specs{
+      width:100%;
+      background-color: #222;
+      color: white;
+
+      .flexible{
+        @include content-max-width-960;
+        @include margin-r-l-auto;
+
+        .text-container{ @include content-format-text; @include general-padding-80;}
+
+        .image-container{
+          @include margin-r-l-auto;
+          img{width:100%;}
+        }
+      }
+    }
+
+    .experiment{
+      @include content-max-width-960;
+      @include margin-r-l-auto;
+
+      .text-container{
+        @include content-format-text;
+        display: inline-block;
+        width:45%;
+        padding-left:0;
+        padding-right: 0;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      .image-container{
+        display: inline-block;
+        width:50%;
+        vertical-align: middle;
+
+        img{width:100%;}
+    }
   }
+
+
+
+  } //#overview
+} //#tab-content

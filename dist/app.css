@@ -494,103 +494,230 @@ nav#product-nav ul#product-nav-list > li.active > a {
   border-bottom: 4px solid black;
 }
 
-div#tab-content #overview .intro {
+div#tab-content #overview section.intro {
   width: 100%;
-  text-align: center;
   background-image: url("img/intro.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-div#tab-content #overview .intro * {
+div#tab-content #overview section.intro * {
   color: white;
   text-decoration: none;
 }
-div#tab-content #overview .intro > div {
+div#tab-content #overview section.intro .text-container {
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
-  line-height: 1.2;
-  padding-top: 20px;
-}
-div#tab-content #overview .intro > div h2 {
-  font-size: 32px;
-  padding-top: 60px;
-  padding-bottom: 20px;
-}
-div#tab-content #overview .intro > div p, div#tab-content #overview .intro > div span {
-  font-size: 18px;
-}
-div#tab-content #overview .intro .intro-element {
+  text-align: center;
+  line-height: 1.4;
+  padding-top: 80px;
   padding-left: 80px;
   padding-right: 80px;
+  padding-bottom: 80px;
 }
-div#tab-content #overview .intro .intro-guide {
-  padding-bottom: 40px;
+div#tab-content #overview section.intro .text-container h2 {
+  font-size: 33px;
 }
-div#tab-content #overview .intro .intro-guide a > img {
-  width: 36px;
+div#tab-content #overview section.intro .text-container h3 {
+  font-size: 25px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview section.intro .text-container h4 {
+  font-size: 20px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview section.intro .text-container p, div#tab-content #overview section.intro .text-container span, div#tab-content #overview section.intro .text-container a {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 18px;
+  padding-top: 20px;
+}
+div#tab-content #overview section.intro .text-container a > img {
+  width: 34px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 20px;
 }
-div#tab-content #overview .intro .intro-img {
+div#tab-content #overview section.intro .image-container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+div#tab-content #overview section.intro .image-container .intro-img {
   position: relative;
 }
-div#tab-content #overview .intro .intro-img img:first-of-type {
-  width: 95%;
+div#tab-content #overview section.intro .image-container .intro-img img:first-of-type {
+  width: 98%;
 }
-div#tab-content #overview .intro .intro-img img:last-of-type {
+div#tab-content #overview section.intro .image-container .intro-img img:last-of-type {
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.transition {
+div#tab-content #overview section.transition {
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
-  text-align: center;
   color: black;
 }
-.transition .transition-text {
-  padding: 20px 17px;
+div#tab-content #overview section.transition .transition-text {
+  text-align: center;
+  line-height: 1.4;
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
 }
-.transition .transition-text h2 {
-  font-size: 32px;
-  padding: 60px 0px 20px 0px;
+div#tab-content #overview section.transition .transition-text h2 {
+  font-size: 33px;
 }
-.transition .transition-text p {
+div#tab-content #overview section.transition .transition-text h3 {
+  font-size: 25px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview section.transition .transition-text h4 {
+  font-size: 20px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview section.transition .transition-text p, div#tab-content #overview section.transition .transition-text span, div#tab-content #overview section.transition .transition-text a {
+  display: inline-block;
+  font-weight: normal;
   font-size: 18px;
+  padding-top: 20px;
 }
-.transition #transition-carousel {
+div#tab-content #overview section.transition #transition-carousel {
   position: relative;
   height: 600px;
 }
-.transition #transition-carousel ul {
+div#tab-content #overview section.transition #transition-carousel ul {
   list-style-type: none;
 }
-.transition #transition-carousel .active {
+div#tab-content #overview section.transition #transition-carousel .active {
   z-index: 600;
 }
-.transition #transition-carousel li, .transition #transition-carousel img {
+div#tab-content #overview section.transition #transition-carousel li, div#tab-content #overview section.transition #transition-carousel img {
   position: absolute;
   top: 0;
   left: 0;
   width: 960px;
 }
-.transition #transition-carousel .controls {
-  width: 100%;
-  font-size: 30px;
-  color: orange;
+div#tab-content #overview section.transition #transition-carousel .controls {
   position: absolute;
   top: 50%;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 30px;
+  font-size: 30px;
+  color: orange;
 }
-.transition #transition-carousel .controls i:first-of-type {
-  transform: translateX(-500px);
+div#tab-content #overview section.transition #transition-carousel .controls i:first-of-type {
+  float: left;
 }
-.transition #transition-carousel .controls i:last-of-type {
-  transform: translateX(500px);
+div#tab-content #overview section.transition #transition-carousel .controls i:last-of-type {
+  float: right;
+}
+div#tab-content #overview section.img-attach {
+  background-image: url("img/image-bg-02.jpg");
+  height: 650px;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+div#tab-content #overview section.product-specs {
+  width: 100%;
+  background-color: #222;
+  color: white;
+}
+div#tab-content #overview section.product-specs .flexible {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+div#tab-content #overview section.product-specs .flexible .text-container {
+  text-align: center;
+  line-height: 1.4;
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+}
+div#tab-content #overview section.product-specs .flexible .text-container h2 {
+  font-size: 33px;
+}
+div#tab-content #overview section.product-specs .flexible .text-container h3 {
+  font-size: 25px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview section.product-specs .flexible .text-container h4 {
+  font-size: 20px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview section.product-specs .flexible .text-container p, div#tab-content #overview section.product-specs .flexible .text-container span, div#tab-content #overview section.product-specs .flexible .text-container a {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 18px;
+  padding-top: 20px;
+}
+div#tab-content #overview section.product-specs .flexible .image-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+div#tab-content #overview section.product-specs .flexible .image-container img {
+  width: 100%;
+}
+div#tab-content #overview .experiment {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+div#tab-content #overview .experiment .text-container {
+  text-align: center;
+  line-height: 1.4;
+  display: inline-block;
+  width: 45%;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+  vertical-align: middle;
+}
+div#tab-content #overview .experiment .text-container h2 {
+  font-size: 33px;
+}
+div#tab-content #overview .experiment .text-container h3 {
+  font-size: 25px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview .experiment .text-container h4 {
+  font-size: 20px;
+  font-weight: normal;
+  padding-top: 20px;
+}
+div#tab-content #overview .experiment .text-container p, div#tab-content #overview .experiment .text-container span, div#tab-content #overview .experiment .text-container a {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 18px;
+  padding-top: 20px;
+}
+div#tab-content #overview .experiment .image-container {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+div#tab-content #overview .experiment .image-container img {
+  width: 100%;
 }

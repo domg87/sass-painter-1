@@ -34,3 +34,37 @@
 @mixin content-max-width-960 {
   max-width: 960px;
 }
+
+@mixin general-padding-80{
+  padding-top:80px;
+  padding-left:80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+}
+
+@mixin content-format-text{
+    text-align: center;
+    line-height: 1.4;
+
+    h2 {font-size: 33px;}
+    h3{font-size: 25px; font-weight: normal;padding-top:20px;}
+    h4{font-size: 20px; font-weight: normal;padding-top:20px;}
+
+    p , span, a {
+      display: inline-block;
+      font-weight: normal;
+      font-size: 18px;
+      padding-top:20px;
+     }
+  }
+
+
+  @mixin bg-image-fixed{
+    height: 650px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+  }

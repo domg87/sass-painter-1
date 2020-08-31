@@ -10980,30 +10980,17 @@ return jQuery;
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
 function openNavbarOnClick() {
-  var btn = $('#navBtn');
-  btn.click(function () {
-    console.log("Click");
-    $('#navbar').toggleClass('toggle');
-  });
+  console.log("Click");
+  $('#navbar').toggleClass('toggle');
 }
 
-function openDropDownMenuOnClick() {
-  var list = $('#navbar-top li.parent-dropdown');
+function openNavbarMenuOnClick() {
+  var list = $('#navbar-top li.parent-dropdown, #navbar-top li.dropdown-submenu');
   list.on("click", function (ev) {
-    var elem = ev.target;
-    console.log("elemento cliccato", elem);
-    $(elem).next('ul').toggleClass("collapsed");
-    $(elem).next('ul').toggleClass("bg-grey"); // elem.addClass('casaas');
-  });
-}
-
-function openDropDownSubMenuOnClick() {
-  var lista = $('#navbar-top li.dropdown-submenu');
-  lista.on("click", function (ev) {
     event.stopPropagation();
     var elem = ev.target;
-    console.log("subelemento cliccato", elem);
-    $(elem).next('ul').toggleClass("collapsed"); // elem.addClass('casaas');
+    $(elem).next('ul').toggle(); // $(elem).next('ul').toggleClass("collapsed");
+    // $(elem).next('ul').toggleClass("bg-grey");
   });
 }
 
@@ -11020,7 +11007,8 @@ function changeNavbarPosition() {
 function carouselNextImage() {
   var imgActive = $('#transition-carousel > div.image > ul > li.active');
   var imgFirst = $('li[data-id = 0]');
-  var imgLast = $('li[data-id = 3]');
+  var imgLast = $('li[data-id = 3]'); // var imgFirst = $('li:first-of-type');
+  // var imgLast = $('li:last-of-type');
 
   if (imgActive.data() === imgLast.data()) {
     imgFirst.addClass('active');
@@ -11043,14 +11031,15 @@ function carouselPrevImage() {
     imgActive.prev().addClass('active');
     imgActive.removeClass('active');
   }
-}
+} // MAIN FUNCTION-----------------------------------------------------
+
 
 function init() {
-  changeNavbarPosition();
   console.log("Hello World");
-  openNavbarOnClick();
-  openDropDownMenuOnClick();
-  openDropDownSubMenuOnClick();
+  changeNavbarPosition();
+  var navBtn = $('#navBtn');
+  navBtn.click(openNavbarOnClick);
+  openNavbarMenuOnClick();
   var nextBtn = $('#transition-carousel .controls >i#next');
   var prevBtn = $('#transition-carousel .controls >i#prev');
   nextBtn.click(carouselNextImage);

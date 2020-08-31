@@ -1,34 +1,26 @@
 const $ = require('jquery');
 
 function openNavbarOnClick(){
-  var btn = $('#navBtn');
-  btn.click( () => {
     console.log("Click");
     $('#navbar').toggleClass('toggle');
-  })
-}
-
-function openDropDownMenuOnClick(){
-  var list = $('#navbar-top li.parent-dropdown');
-  list.on("click" , (ev) => {
-    var elem = ev.target;
-    console.log("elemento cliccato",elem);
-    $(elem).next('ul').toggleClass("collapsed");
-    $(elem).next('ul').toggleClass("bg-grey");// elem.addClass('casaas');
-  })
 }
 
 
-
-function openDropDownSubMenuOnClick(){
-  var lista = $('#navbar-top li.dropdown-submenu');
-  lista.on("click" , (ev)  => {
+function openNavbarMenuOnClick(){
+  var list = $('#navbar-top li.parent-dropdown, #navbar-top li.dropdown-submenu');
+  list.on("click" , (ev)  => {
     event.stopPropagation();
     var elem = ev.target;
-    console.log("subelemento cliccato",elem);
-    $(elem).next('ul').toggleClass("collapsed");// elem.addClass('casaas');
+    $(elem).next('ul').toggle();
+
+      // $(elem).next('ul').toggleClass("collapsed");
+
+
+    // $(elem).next('ul').toggleClass("bg-grey");
   })
 }
+
+
 
 
 function changeNavbarPosition() {
@@ -45,6 +37,9 @@ function carouselNextImage(){
   var imgActive =  $('#transition-carousel > div.image > ul > li.active');
   var imgFirst = $('li[data-id = 0]');
   var imgLast = $('li[data-id = 3]');
+
+  // var imgFirst = $('li:first-of-type');
+  // var imgLast = $('li:last-of-type');
 
     if ( imgActive.data() === imgLast.data()  ) {
     imgFirst.addClass('active');
@@ -72,14 +67,18 @@ function carouselPrevImage(){
     }
 }
 
+// MAIN FUNCTION-----------------------------------------------------
 function init(){
+  console.log("Hello World");
 
   changeNavbarPosition();
 
-  console.log("Hello World");
-  openNavbarOnClick();
-  openDropDownMenuOnClick();
-  openDropDownSubMenuOnClick();
+  var navBtn = $('#navBtn');
+  navBtn.click(openNavbarOnClick);
+
+
+  openNavbarMenuOnClick();
+
 
 
   var nextBtn= $('#transition-carousel .controls >i#next');
