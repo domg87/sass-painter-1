@@ -67,11 +67,11 @@ div#tab-content{
 
         #transition-carousel {
           position: relative;
-          height: 600px;
+          height: 594px;
 
           ul{ list-style-type: none;}
 
-          .active{z-index:600;}
+          .active{z-index:200;}
 
           li,img{
             position: absolute;
@@ -80,11 +80,22 @@ div#tab-content{
             width: 960px;
           }
 
+          #imgLeft{
+            overflow: hidden;
+            width: 50%;
+            min-width: 30px;
+            max-width: 960px;
+            border: 1px solid black;
+            height: 594px;
+            position: absolute;
+            z-index: 210;
+          }
+
           .controls{
             position: absolute;
             top: 50%;
             left: 50%;
-            z-index: 0;
+            z-index: 10;
             transform: translate(-50%, -50%);
             width: 110%;
             height: 30px;
@@ -93,6 +104,30 @@ div#tab-content{
 
               i:first-of-type{float: left;}
               i:last-of-type{float: right;}
+          }
+
+          .instruction{
+            position: absolute;
+            z-index: 990;
+            top: 0;
+            right: 0;
+            width:2px;
+            height:594px;
+            background-color: black;
+
+            p{
+              display: block;
+              line-height: 2;
+              height: 36px;
+              width: 30px;
+              color:white;
+              background-color: rgba(0,0,0,0.9);
+              position: absolute;
+              top: 50%;
+              right:0;
+
+              &:hover{cursor: pointer;}
+            }
           }
         }
     }
@@ -150,8 +185,10 @@ div#tab-content{
     }
 
     section.sections{
-      @include general-padding-80;
+      // @include general-padding-80;
       @include content-format-text;
+      padding-top:80px;
+      padding-bottom:80px;
 
       background-color: white;
       width:100%;

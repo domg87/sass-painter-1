@@ -598,13 +598,13 @@ div#tab-content #overview section.transition .transition-text p, div#tab-content
 }
 div#tab-content #overview section.transition #transition-carousel {
   position: relative;
-  height: 600px;
+  height: 594px;
 }
 div#tab-content #overview section.transition #transition-carousel ul {
   list-style-type: none;
 }
 div#tab-content #overview section.transition #transition-carousel .active {
-  z-index: 600;
+  z-index: 200;
 }
 div#tab-content #overview section.transition #transition-carousel li, div#tab-content #overview section.transition #transition-carousel img {
   position: absolute;
@@ -612,11 +612,21 @@ div#tab-content #overview section.transition #transition-carousel li, div#tab-co
   left: 0;
   width: 960px;
 }
+div#tab-content #overview section.transition #transition-carousel #imgLeft {
+  overflow: hidden;
+  width: 50%;
+  min-width: 30px;
+  max-width: 960px;
+  border: 1px solid black;
+  height: 594px;
+  position: absolute;
+  z-index: 210;
+}
 div#tab-content #overview section.transition #transition-carousel .controls {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 0;
+  z-index: 10;
   transform: translate(-50%, -50%);
   width: 110%;
   height: 30px;
@@ -628,6 +638,29 @@ div#tab-content #overview section.transition #transition-carousel .controls i:fi
 }
 div#tab-content #overview section.transition #transition-carousel .controls i:last-of-type {
   float: right;
+}
+div#tab-content #overview section.transition #transition-carousel .instruction {
+  position: absolute;
+  z-index: 990;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 594px;
+  background-color: black;
+}
+div#tab-content #overview section.transition #transition-carousel .instruction p {
+  display: block;
+  line-height: 2;
+  height: 36px;
+  width: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+div#tab-content #overview section.transition #transition-carousel .instruction p:hover {
+  cursor: pointer;
 }
 div#tab-content #overview section.img-attach.first {
   background-image: url("img/image-bg-02.jpg");
@@ -732,12 +765,10 @@ div#tab-content #overview section.product-specs .pillar-canvas .image-container 
   width: 100%;
 }
 div#tab-content #overview section.sections {
-  padding-top: 80px;
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-bottom: 80px;
   text-align: center;
   line-height: 1.4;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background-color: white;
   width: 100%;
 }

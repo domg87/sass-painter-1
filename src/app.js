@@ -67,6 +67,21 @@ function carouselPrevImage(){
     }
 }
 
+
+function carouselOffsetxImage(){
+  var evtype = event.type;
+  console.log(evtype);
+ var elem =   document.getElementById("imgLeft").getBoundingClientRect();
+  console.log(elem);
+  console.log("la width: del DIV IMGLEFT è", elem.width);
+  console.log("l'evento mouse ha le varie proprieta:", event);
+  console.log("event OffsetX", event.pageX);
+  x = event.offsetX;
+  y = event.offsetY;
+}
+
+
+
 // MAIN FUNCTION-----------------------------------------------------
 function init(){
   console.log("Hello World");
@@ -75,7 +90,6 @@ function init(){
 
   var navBtn = $('#navBtn');
   navBtn.click(openNavbarOnClick);
-
 
   openNavbarMenuOnClick();
 
@@ -87,7 +101,28 @@ function init(){
   nextBtn.click(carouselNextImage);
   prevBtn.click(carouselPrevImage);
 
+  var m_pos;
+  var moving_bar = document.getElementById("resize");
+
+  function resize(e){
+      var parent = moving_bar.parentNode;
+      var xDifference = e.x - m_pos;
+      console.log("m-pos : ",m_pos,"event.x : ",e.x);
+      m_pos = e.x;
+      parent.style.width = (parseInt(getComputedStyle(parent, '').width) + xDifference) + "px";
+  }
+
+  moving_bar.addEventListener("mousedown", function(e) {
+      m_pos = e.x;
+      document.addEventListener("mousemove", resize, false);
+  }, false);
+
+  document.addEventListener("mouseup", function() {
+      document.removeEventListener("mousemove", resize, false);
+  }, false);
+
 
 }
+
 
 $(document).ready(init);
