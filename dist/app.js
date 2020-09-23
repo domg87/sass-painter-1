@@ -10988,9 +10988,8 @@ function openNavbarMenuOnClick() {
   var list = $('#navbar-top li.parent-dropdown, #navbar-top li.dropdown-submenu');
   list.on("click", function (ev) {
     event.stopPropagation();
-    var elem = ev.target;
-    $(elem).next('ul').toggle(); // $(elem).next('ul').toggleClass("collapsed");
-    // $(elem).next('ul').toggleClass("bg-grey");
+    var target = ev.target;
+    $(target).next('ul').toggle();
   });
 }
 
@@ -11033,16 +11032,22 @@ function carouselPrevImage() {
   }
 }
 
-function carouselOffsetxImage() {
-  var evtype = event.type;
-  console.log(evtype);
-  var elem = document.getElementById("imgLeft").getBoundingClientRect();
-  console.log(elem);
-  console.log("la width: del DIV IMGLEFT è", elem.width);
-  console.log("l'evento mouse ha le varie proprieta:", event);
-  console.log("event OffsetX", event.pageX);
-  x = event.offsetX;
-  y = event.offsetY;
+function beforeAfterImageCarousel(m_pos, moving_bar) {
+  function resize(e) {
+    var parent = moving_bar.parentNode;
+    var xDifference = e.x - m_pos; // console.log("m-pos : ",m_pos,"event.x : ",e.x);
+
+    m_pos = e.x;
+    parent.style.width = parseInt(getComputedStyle(parent, '').width) + xDifference + "px";
+  }
+
+  moving_bar.addEventListener("mousedown", function (e) {
+    m_pos = e.x;
+    document.addEventListener("mousemove", resize, false);
+  }, false);
+  moving_bar.addEventListener("mouseup", function () {
+    document.removeEventListener("mousemove", resize, false);
+  }, false);
 } // MAIN FUNCTION-----------------------------------------------------
 
 
@@ -11058,22 +11063,7 @@ function init() {
   prevBtn.click(carouselPrevImage);
   var m_pos;
   var moving_bar = document.getElementById("resize");
-
-  function resize(e) {
-    var parent = moving_bar.parentNode;
-    var xDifference = e.x - m_pos;
-    console.log("m-pos : ", m_pos, "event.x : ", e.x);
-    m_pos = e.x;
-    parent.style.width = parseInt(getComputedStyle(parent, '').width) + xDifference + "px";
-  }
-
-  moving_bar.addEventListener("mousedown", function (e) {
-    m_pos = e.x;
-    document.addEventListener("mousemove", resize, false);
-  }, false);
-  document.addEventListener("mouseup", function () {
-    document.removeEventListener("mousemove", resize, false);
-  }, false);
+  beforeAfterImageCarousel(m_pos, moving_bar);
 }
 
 $(document).ready(init);
@@ -11098,8 +11088,8 @@ $(document).ready(init);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! Z:\Progetti\Corso BOOLEAN\Esercizi\sass-painter\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! Z:\Progetti\Corso BOOLEAN\Esercizi\sass-painter\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! Z:\Progetti\Corso BOOLEAN\esercizi\sass-painter\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! Z:\Progetti\Corso BOOLEAN\esercizi\sass-painter\src\app.scss */"./src/app.scss");
 
 
 /***/ })

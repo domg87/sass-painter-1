@@ -89,7 +89,11 @@ div#tab-content{
             height: 594px;
             position: absolute;
             z-index: 210;
+
+
           }
+
+          .noselect {@include noselect;}
 
           .controls{
             position: absolute;
@@ -115,7 +119,7 @@ div#tab-content{
             height:594px;
             background-color: black;
 
-            p{
+            span{
               display: block;
               line-height: 2;
               height: 36px;
@@ -128,6 +132,8 @@ div#tab-content{
 
               &:hover{cursor: pointer;}
             }
+
+
           }
         }
     }

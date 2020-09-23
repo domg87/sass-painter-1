@@ -92,6 +92,7 @@ header#main-header{
           &::after{ @include clearfix;}
 
           #navbar-top{
+
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
@@ -101,7 +102,7 @@ header#main-header{
             .bg-grey{background-color: #f1f1f1;}
 
             a:hover{
-                background-color: #f1f1f1;
+                background-color: #e6e6e6 !important;
                 color:black!important;
               }
 
@@ -114,21 +115,26 @@ header#main-header{
                 color:white;
               }
 
+              li.dropdown-header{
+                padding: 18px 24px;
+              }
+
+
+
               &>ul{
                 position:absolute;
-                top:50px;
+                top:55px;
                 left:0;
                 z-index: 1000;
                 color:#333;
                 min-width:160px;
 
-                &>li>a{color:#333;}
+                &>li>a{color:#333!important;}
 
                 & > .dropdown-submenu{
                   min-width:160px;
                   @include position-relative;
 
-                  &:hover{background-color:  #e6e6e6 !important}
 
                   .dropdown-menu{
                     z-index: 1000;
@@ -136,7 +142,9 @@ header#main-header{
                     top:0px;
                     left:100%;
                     min-width:160px;
-                    background-color: #e6e6e6 !important
+                    background-color: #e6e6e6 !important;
+
+                    a:hover,li:hover{background-color:  #b8b8b8!important;}
                   }
                }
              }
@@ -233,6 +241,10 @@ header#main-header{
         }
 
         #navbar-top{
+
+
+
+
           width:100%;
           flex-wrap: nowrap;
           display: flex;
@@ -288,3 +300,23 @@ header#main-header{
   } //header #main
 
 } //media query
+
+
+@media all and (min-width: 779px) and (max-width: 3000px) {
+
+  #navbar{
+
+    #navbar-top{
+
+      li.parent-dropdown:hover > ul, li.dropdown-submenu:hover >ul{
+        display: block!important;
+      }
+
+      .main, .main-sub{
+        display: none!important;
+      }
+
+    }
+  }
+
+}

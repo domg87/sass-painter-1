@@ -115,7 +115,7 @@ header#main-header #site-navbar .container #navbar #navbar-top .bg-grey {
   background-color: #f1f1f1;
 }
 header#main-header #site-navbar .container #navbar #navbar-top a:hover {
-  background-color: #f1f1f1;
+  background-color: #e6e6e6 !important;
   color: black !important;
 }
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] {
@@ -128,25 +128,25 @@ header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] 
   padding: 18px 25px;
   color: white;
 }
+header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] li.dropdown-header {
+  padding: 18px 24px;
+}
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul {
   position: absolute;
-  top: 50px;
+  top: 55px;
   left: 0;
   z-index: 1000;
   color: #333;
   min-width: 160px;
 }
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > li > a {
-  color: #333;
+  color: #333 !important;
 }
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu {
   min-width: 160px;
   position: relative;
   top: 0;
   left: 0;
-}
-header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu:hover {
-  background-color: #e6e6e6 !important;
 }
 header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu .dropdown-menu {
   z-index: 1000;
@@ -155,6 +155,9 @@ header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] 
   left: 100%;
   min-width: 160px;
   background-color: #e6e6e6 !important;
+}
+header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu .dropdown-menu a:hover, header#main-header #site-navbar .container #navbar #navbar-top > li[class*=li-] > ul > .dropdown-submenu .dropdown-menu li:hover {
+  background-color: #b8b8b8 !important;
 }
 header#main-header #site-navbar .container #navbar #navbar-link {
   position: absolute;
@@ -275,6 +278,14 @@ header#main-header #site-navbar .container::after {
     display: inline-block;
     margin-left: 0px;
     cursor: pointer;
+  }
+}
+@media all and (min-width: 779px) and (max-width: 3000px) {
+  #navbar #navbar-top li.parent-dropdown:hover > ul, #navbar #navbar-top li.dropdown-submenu:hover > ul {
+    display: block !important;
+  }
+  #navbar #navbar-top .main, #navbar #navbar-top .main-sub {
+    display: none !important;
   }
 }
 body {
@@ -622,6 +633,13 @@ div#tab-content #overview section.transition #transition-carousel #imgLeft {
   position: absolute;
   z-index: 210;
 }
+div#tab-content #overview section.transition #transition-carousel .noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 div#tab-content #overview section.transition #transition-carousel .controls {
   position: absolute;
   top: 50%;
@@ -648,7 +666,7 @@ div#tab-content #overview section.transition #transition-carousel .instruction {
   height: 594px;
   background-color: black;
 }
-div#tab-content #overview section.transition #transition-carousel .instruction p {
+div#tab-content #overview section.transition #transition-carousel .instruction span {
   display: block;
   line-height: 2;
   height: 36px;
@@ -659,7 +677,7 @@ div#tab-content #overview section.transition #transition-carousel .instruction p
   top: 50%;
   right: 0;
 }
-div#tab-content #overview section.transition #transition-carousel .instruction p:hover {
+div#tab-content #overview section.transition #transition-carousel .instruction span:hover {
   cursor: pointer;
 }
 div#tab-content #overview section.img-attach.first {
